@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import {useState}  from 'react';
+import Home  from './home';
 
 
 const Nav=()=>{
@@ -16,7 +16,6 @@ const Nav=()=>{
 
     
         }
-       
         
         e.target.setAttribute('data', false);
         let a=e.target.innerHTML;
@@ -39,7 +38,7 @@ const Nav=()=>{
             else{
                 clearInterval();
             }
-            },150)
+            },10)
             
     
     }
@@ -48,6 +47,7 @@ const Nav=()=>{
     
     
     return (
+        <>
         <div className='navbar'>
             <h1 className='heading'>MY PORTFOLIO</h1>
            <ul className='list'>
@@ -58,8 +58,14 @@ const Nav=()=>{
             <h1 className='bar' onClick={click}>PROJECT</h1>
             <h1 className='bar' onClick={click}>CONTACT</h1>
            </ul>
-
+          
         </div>
+        <div className='home'>
+        <Home/>
+      
+        </div>
+        
+        </>
     )
 }
 const root=ReactDOM.createRoot(document.getElementById('body'));
