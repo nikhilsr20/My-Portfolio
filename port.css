@@ -68,3 +68,14 @@ background-color: rgb(38, 41, 41);
        font-size: x-large;
     }
 }
+.name{
+    font-size: 60px;
+    margin-left: 10px;
+}
+.yo{
+    margin-left: 10px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}

@@ -28,7 +28,7 @@ const Nav=()=>{
             e.target.style.color="peachpuff"
             e.target.style.backgroundColor="black"
             e.target.style.borderRadius="10px"
-            e.target.style.padding="5px"
+            e.target.style.padding="6px"
             setInterval(()=>{
                 if(i<a.length){
                 

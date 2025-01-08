@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import img from '/hi.png';
 const Home = () => {
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0); 
@@ -20,10 +20,18 @@ const Home = () => {
   }, [index, text]);
 
   return (
-    <div>
+    <>
+    <div className="flex">
+      <div>
       <h1 className="name">{displayText}</h1>
-      <h1 ></h1>
+      <h1 className="yo">I am a Frontend Developer</h1>
+      </div>
+      <div>
+      <img src={img} alt="Profile photo" />
+      </div>
     </div>
+    
+    </>
   );
 };
 
