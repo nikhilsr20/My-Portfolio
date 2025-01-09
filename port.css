@@ -79,3 +79,24 @@ background-color: rgb(38, 41, 41);
     display: flex;
     justify-content: space-between;
 }
+.in{
+    position: fixed;
+    top: 200px;
+    left: 1200px;
+    width: 500px;
+    height: 600px;
+    border: solid black 2px;
+    border-radius: 1900px;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 10px 10px rgb(132, 107, 107);
+    opacity: 0.1;
+    animation: nikhil 2s ease-in-out 0.1s 1 forwards;
+}
+@keyframes nikhil {
+    100%{
+        opacity: 1;
+    }
+}
+.leet{
+    size:30px;
+}
