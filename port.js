@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import Home  from './home';
-
+import { createBrowserRouter,RouterProvider,Link ,Outlet} from 'react-router-dom';
+import About from './About';
 
 const Nav=()=>{
     
@@ -51,7 +52,7 @@ const Nav=()=>{
         <div className='navbar'>
             <h1 className='heading'>MY PORTFOLIO</h1>
            <ul className='list'>
-            <h1 className='bar'  onClick={click}>HOME</h1>
+            <h1 className='bar'  onClick={click}><Link to="/About">HOME</Link></h1>
             <h1 className='bar' onClick={click}>ABOUT</h1>
             <h1 className='bar' onClick={click}>SKILLS</h1>
             <h1 className='bar' onClick={click}>RESUME</h1>
@@ -62,11 +63,24 @@ const Nav=()=>{
         </div>
         <div className='home'>
         <Home/>
-      
+       <Outlet/>
+         
         </div>
         
         </>
     )
 }
+
+    const appRouter=createBrowserRouter([
+        {
+            path:"/",
+            element:<Nav/>
+        },
+        {
+            path:"/About",
+            element:<About/>
+        }
+    ])
+
 const root=ReactDOM.createRoot(document.getElementById('body'));
-root.render(<Nav/>)
+root.render(<RouterProvider router={appRouter}/>)
